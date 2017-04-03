@@ -1,0 +1,26 @@
+body{
+    background-color:#efeded
+}
+.top-div{
+    font-size:25px;
+    margin-top: 10%
+}
+.forms{
+    margin-top:20px
+}
+
+.sign-form:first-child{
+    border-radius: 5px 5px 0px 0px
+}
+.sign-form:last-child{
+    border-radius: 0px 0px 5px 5px;
+    border-top:none
+}
+.sign-in{
+    width: 100%;
+    margin-top: 20px
+}
+.message{
+    margin: 10px 0px 10px 0px;
+    width:100% 
+}

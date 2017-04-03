@@ -1,13 +1,13 @@
 $("#loginButton").click(function() {
-    var login = $("[name='login']").val();
-    var password = $("[name='password']").val();
+    var loginValue = $("[name='login']").val();
+    var passwordValue = $("[name='password']").val();
 
     $.ajax({
         url: "/login",
         method: "POST",
         data: {
-            "login": login,
-            "password": password
+            "login": loginValue,
+            "password": passwordValue
         },
     }).then(function(res) {
         console.log(res);
