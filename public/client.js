@@ -11,7 +11,16 @@ $("#loginButton").click(function() {
         },
     }).then(function(res) {
         console.log(res);
-
+        if(res=="correct"){
+            console.log("good");
+            $("#done").attr("style","display:block");
+             $("#error").attr("style","display:none")
+        }
+        else{
+            console.log("bad");
+             $("#error").attr("style","display:block");
+              $("#done").attr("style","display:none")
+        }
         // Handle response here
     })
 });
