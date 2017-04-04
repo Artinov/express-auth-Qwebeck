@@ -18,7 +18,7 @@ app.post('/login', function(req, res) {
     console.log(req.body); // This your request data
 
 
-
+// users.forEach(function(i,users){
 if(req.body.login===users[0].login && req.body.password===users[0].password){
     console.log('done');
     res.send("correct")
@@ -34,6 +34,7 @@ if(req.body.login===users[0].login && req.body.password===users[0].password){
   
     // res.send("This is auth route");
 });
+// })
 
 app.listen(3000, function() {
     console.log("Server is working on http://localhost:3000/");
