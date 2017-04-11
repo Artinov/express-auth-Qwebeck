@@ -11,7 +11,7 @@ $("#loginButton").click(function() {
         },
     }).then(function(res) {
         console.log(res);
-        if(res=="correct"){
+        if(res){
             console.log("good");
             $("#done").attr("style","display:block");
              $("#error").attr("style","display:none")

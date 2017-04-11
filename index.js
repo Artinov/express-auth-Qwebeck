@@ -17,25 +17,18 @@ app.get('/about', function(req, res) {
 app.post('/login', function(req, res) {
     console.log(req.body); // This your request data
 
-
-// users.forEach(function(i,users){
-if(req.body.login===users[0].login && req.body.password===users[0].password){
-    console.log('done');
-    res.send("correct")
-
-}else{
-    console.log("error")
-    res.send("error")
-}
+var successAuth 
+users.forEach(function(user){
  
-    /*
-     * Write your auth logic here
-     */
-  
-    // res.send("This is auth route");
+var reqData = req.body
+if(user.login == reqData.login &&  user.password == reqData.password ){
+    successAuth = true
+} 
+
 });
-// })
+res.send(successAuth)
+})
 
 app.listen(3000, function() {
     console.log("Server is working on http://localhost:3000/");
-});
+})
